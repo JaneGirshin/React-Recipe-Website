@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+    --main-color: #fcfcfc;
+    --accent-color: #F85663;
+    --shadow-color: #e2e2e2;
+    --gradient-color: linear-gradient(to right top, #f1c6ca, #f7acb2, #fa9199, #fa757e, #f85663);
+  }
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.recipe-card {
+    margin: 2rem;
+    width: 25rem;
+    height: 35rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.5rem;
+}
+
+.card-bg-img {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transform 2s;
+    filter: brightness(50%); 
+}
+
+.card-publisher {
+    z-index: 1;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--main-color);
+    color: black;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    padding-right: 1rem;
+    -webkit-transition: 1s ease;
+}
+
+.card-title {
+    z-index: 1;
+    position: absolute;
+    top: 12%;
+    left: 0.5rem;
+    color: var(--main-color);
+    font-size: 3.5rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    -webkit-transition: 1s ease;
+}
+
+.card-calories {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+    color: var(--main-color);
+    font-size: 2rem;
+    padding: 0.5rem;
+    -webkit-transition: 1s ease;
+}
+
+.card-hover {
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-color);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: 2s ease;
+}
+
+.card-hover-text {
+    color: #fff;
+    transition: all .5s;
+    position: absolute;
+    top: 40%;
+    font-size: 3.5rem;
+    transform: translateX(-30rem);
+    opacity: 1;
+    z-index: 5;
+    transition-delay: .3s;
+    font-weight: bold;
+    right: 15%;
+}
+
+.recipe-card:hover .card-hover-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.recipe-card:hover .card-bg-img {
+    transform: scale(1.2);
+}
+
+.recipe-card:hover .card-hover {
+    transform: translateY(0);
+    opacity: 0.6;
+    -webkit-transition: 2s ease;
+}
+
+.recipe-card:hover .card-publisher, 
+.recipe-card:hover .card-title,
+.recipe-card:hover .card-calories {
+    opacity: 0.2;
+}
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 1366px) {
+    .app-body-title {
+        font-size: 3rem;
+    }
+
+    .recipe-container {
+        width: 90%;
+    }
+
+    .recipe-card {
+        margin: 2rem;
+        width: 18rem;
+        height: 28rem;
+    }
+
+    .card-publisher {
+        font-size: 1rem;
+    }
+    
+    .card-title {
+        font-size: 2.5rem;
+    }
+    
+    .card-calories {
+        font-size: 1.5rem;
+    }
+
+    .card-hover-text {
+        top: 40%;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .app-body-title {
+        font-size: 3rem;
+    }
+
+    .recipe-container {
+        width: 90%;
+    }
+
+    .recipe-card {
+        margin: 2rem;
+        width: 32rem;
+        height: 14rem;
+        background-color: var(--main-color);
+        -webkit-box-shadow: 8px 8px 10px -6px var(--shadow-color);
+	    -moz-box-shadow: 8px 8px 10px -6px var(--shadow-color);
+        box-shadow: 8px 8px 10px -6px var(--shadow-color);
+        margin: 1rem;
+    }
+
+    .card-bg-img {
+        width: 100%;
+        height: 80%;
+        z-index: -1;
+        transition: transform 2s;
+        filter: brightness(50%);
+    }
+
+    .card-publisher {
+        font-size: 1rem;
+        top: 1rem;
+        left: 0;
+        width: 40%;
+        color: black;
+        padding: 0.5rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .card-title {
+        color: #3d3d3d;
+        font-size: 2rem;
+        top: 77%;
+        width: 70%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .card-calories {
+        color: black;
+        bottom: -0.5rem;
+        right: 0;
+        background-color: var(--accent-color);
+        width: 28%;
+        height: 20%;
+    }
+
+    .card-hover-text {
+        top: 40%;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card-calories {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card-calories {
+        font-size: 1.2rem;
+        padding-top: 0.7rem;
+    }
+}
