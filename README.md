@@ -1,68 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Yummyinmytummy - React Recipe Search Website 
+[Live Version](https://yummyinmytummy.netlify.app/)
+> Recipe search website build with ReactJS, using "Edamam" API
 
-## Available Scripts
+## General info
+React recipe website, using an external api ("Edamam") to fetch data.
+I wanted to explore the possibilities with a fetch api, and I though a recipe site is a good way to do so. 
+Aside from the cute design, the site gives the user a big recipe source with detailed list of recipes, calories and servings.
+The original recipe url is also available for more information.
 
-In the project directory, you can run:
+I've learned a lot when building this app.
+It was a struggle to keep finding the next error with the api, but in the end everything is working great.
+The problem I spend most of my time on was to transfer the data between the components.
+But overall I'm happy with the final result :)
 
-### `npm start`
+## Screenshots
+![recipe-github1](https://user-images.githubusercontent.com/54534609/86545490-133c1580-bf38-11ea-9907-3d32cf322bb8.png)
+![recipe-github2](https://user-images.githubusercontent.com/54534609/86545492-146d4280-bf38-11ea-862a-789428c815a0.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies
+* JavaScript
+* React - version 16.13.1
+* Bootstrap: version 4.5.0,
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Setup
+To run this project, install it locally using npm:
+```
+npm install
+npm run
+```
 
-### `npm test`
+## Features
+* Search any recipe in your mind
+* Viewing different options for your search
+* New page display for the recipe of your choice with more details
+* Easy navigation between pages
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3de224e5-6b4e-4fd0-a0ac-25559ce2b51c/deploy-status)](https://app.netlify.com/sites/yummyinmytummy/deploys)
 
-### `npm run build`
+## Contributing
+[Unsplash](https://unsplash.com/) for the pretty background image.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Font Awesome](https://fontawesome.com/) for the icons. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+And of course, [Edamam API](https://developer.edamam.com/) for the results.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Authors
+[Jane Girshin 2020](https://github.com/JaneGirshin)
