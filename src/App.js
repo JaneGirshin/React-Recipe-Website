@@ -15,20 +15,13 @@ class App extends Component {
   }
 
   getRecipe = async (e) => {
-    const recipeName = e.target.elements.recipeName.value || 'breakfast';
+    const recipeName = e.target.elements.recipeName.value;
     e.preventDefault();
     const api_call = await fetch(`https://api.edamam.com/search?q=${recipeName}&app_id=${APP_ID}&app_key=${APP_KEY}`);
 
     const data = await api_call.json();
     this.setState({recipes: data.hits});
   }
-
-  // componentDidMount = () => {
-  //   const json = localStorage.getItem("recipes");
-  //   console.log(json);
-  //   const recipes = JSON.parse(json);
-  //   this.setState({ recipes });
-  // }
 
   componentDidUpdate = () => {
     const recipes = JSON.stringify(this.state.recipes);
